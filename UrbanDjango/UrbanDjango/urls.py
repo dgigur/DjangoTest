@@ -16,12 +16,16 @@ Including another URLconfUrbanDjango
 from django.contrib import admin
 from django.urls import path
 from task2.views import func_temp, Index2
+from task3.views import platform, games, cart
 #from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('func/', func_temp),
     path('class/', Index2.as_view()),
+    path('platform/', platform),
+    path('platform/games/', games),
+    path('platform/cart/', cart),
     #path('class/', TemplateView.as_view(template_name='second_task.class_template.html'))
 
 ]
