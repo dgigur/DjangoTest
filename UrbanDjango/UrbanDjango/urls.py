@@ -10,13 +10,18 @@ Function views
 Class-based views
     1. Add an import:  from other_app.views import Home
     2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
+Including another URLconfUrbanDjango
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
 from django.urls import path
+from task2.views import func_temp, Index2
+#from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('func/', func_temp),
+    path('class/', Index2.as_view()),
+    #path('class/', TemplateView.as_view(template_name='second_task.class_template.html'))
+
 ]
