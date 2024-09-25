@@ -18,6 +18,7 @@ from django.urls import path
 from task2.views import func_temp, Index2
 #from task3.views import platform, games, cart
 from task4.views import platform, games, cart
+from task5.views import sign_up_by_django, sign_up_by_html
 #from django.views.generic import TemplateView
 
 urlpatterns = [
@@ -27,6 +28,8 @@ urlpatterns = [
     path('platform/', platform),
     path('platform/games/', games),
     path('platform/cart/', cart),
+    path('', sign_up_by_html),
+    path('django_sign_up', sign_up_by_django)
     #path('class/', TemplateView.as_view(template_name='second_task.class_template.html'))
 
 ]
